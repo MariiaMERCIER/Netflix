@@ -1,26 +1,23 @@
-import data from "../movies_netflix.json"
 
 
-const Section =()=>{
+
+const Section =(props)=>{
     return(  
-        <>
-        {data.map((elem, index)=>{
-            return (
               <div className="category">
-                  <p>{elem.category}</p>
+                  <p>{props.category}</p>
                   <div className="images">
-                  {elem.images.map((elem, index)=>{
+                  {props.image.map((element, index)=>{
          return ( 
-         <img className="film" src={elem} alt ="films"/>)
+         <img className="film" src={element} alt ="films"/>)
       })
           }
       </div>
       </div>
-            )
-          })}
+            
+          
           
 
-  </>  
+   
 )}
 
 export default Section;
