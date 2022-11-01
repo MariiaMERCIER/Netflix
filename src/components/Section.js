@@ -8,7 +8,7 @@ const Section =(props)=>{
                   <div className="images">
                   {props.image.map((element, index)=>{
          return ( 
-         <img className="film" src={element} alt ="films"/>)
+         <img className="film" key={index} src={element} alt ="films"/>)
       })
           }
       </div>
